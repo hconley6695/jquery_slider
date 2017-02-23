@@ -1,11 +1,26 @@
-// Javascript Entry Point
-import $ from 'jquery';
 
-// THIS MAKES THE LAST ITEM IN THE SLIDER AS A REPLICA OF THE FIRST.
-	// var clone = $('.individual-slide:first-child').clone();
-	// $('.slides').append(clone);
+
+jQuery(document).ready(function($) {
+
+	// FUNCTION DISPLAYS MOBILE MENU WHEN YOU TAP THE HAMBURGER
+	$('.hamburger-icon').click(function () {
+		$('#mobile-li').slideToggle(400);
+	})
+
+	//FUNCTION DISPLAYS THE SEARCH BOX WHEN YOU TAP THE SEARCH ICON
+	$('.search-icon').click(function() {
+		$('.search-site').toggleClass('show-search');
+	})
+
+	$('#post-4 button').removeClass('blue-border');
+
+	// THIS MAKES THE LAST ITEM IN THE SLIDER AS A REPLICA OF THE FIRST.
+	var clone = $('.individual-slide:first-child').clone();
+	$('.slides').append(clone);
 	// NEXT SECTION OF FUNCTIONS MAKES THE SLIDER MOVE
-	var width = 1220; //needs to grab value of width of slider/individual
+	// var width = 1220; //needs to grab value of width of slider/individual
+	
+	var width = $('.individual-slide').css('max-width');
 	var animateSpeed = 1000;
 	var interval;
 	var currentSlide = 1;
@@ -45,11 +60,13 @@ import $ from 'jquery';
 	});	
 
 
-	// FUNCTIONS ARE FOR RIGHT AND LEFT BUTTONS BUT NOT WORKING PROPERLY
+	// FUNCTIONS ARE FOR RIGHT AND LEFT BUTTONS
 
 // BOTH WILL ONLY WORK IF YOU PRESS IT ONCE AND THEN PULL MOUSE AWAY COMPLETELY
 
-// SLIDE LEFT WORKS EXCEPT IF CURRENTSLIDE === 1, MARGIN LEFT: -3660PX SLIDES THE WHOLE THING THE WRONG WAY
+// SLIDE LEFT WORKS EXCEPT IF CURRENTSLIDE === 1, MARGIN LEFT: -(WIDTH*2) SLIDES THE WHOLE THING THE WRONG WAY
+// SLIDE RIGHT WORKS EXCEPT IF CURRENTSLIDE === 4, MARGIN LEFT: 0 SLIDES THE WHOLE THING THE WRONG WAY
+
 	$('#slide-left').click(function() {
 
 		if (currentSlide === 4) {
@@ -63,9 +80,18 @@ import $ from 'jquery';
 			currentSlide = 1;
 		} else if (currentSlide === 1) {
 
+			function pixToNum(pixels){
+				var strNum = pixels.substring(0, pixels.length-2);
+				var num = Number(strNum);
+				var largeNum = num * 3;
+				var largeWidth = largeNum + "px";
+				return largeWidth;
+			}
+			var finalWidth = pixToNum(width);
 
-			$slideContainer.animate({'margin-left': '-' + (width * 2)}, 500);
+			$slideContainer.animate({'margin-left': '-=' + finalWidth}, 500);
 			currentSlide = 4;
+
 		} else {
 			alert('You broke the slider');
 		}
@@ -95,3 +121,14 @@ import $ from 'jquery';
 	startSlider();
 	// stopSlider();
 	// ///////////////////////////////
+
+
+});
+	
+
+
+
+
+
+
+
