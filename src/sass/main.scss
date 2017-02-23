@@ -3,3 +3,104 @@
 // Turn on freq used libraries
 // @import 'normalize-css/normalize';
 // @import 'font-awesome/scss/font-awesome';
+
+#slider-container {
+	margin: 0 auto;
+	width: 100%;
+	position: relative;
+}
+
+#slider {
+	max-width: 100%;
+	height: auto;
+	/*width: 1220px;*/
+	max-width: 1220px;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#slider .slides {
+	width: 6100px;
+	height: 425px;
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+
+
+.individual-slide {
+	height: 425px;
+	/*width: 1220px;*/
+	max-width: 1220px;
+	width: 100%;
+	float: left;
+	list-style: none;
+	margin: 0 auto;
+	position: relative;
+	text-align: left;
+}
+
+.individual-slide img {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.individual-slide h2 {
+	width: 30%;
+	font-family: 'Alegreya Sans', sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 38px;
+	line-height: 1.5;
+	padding: 35px 0 10px 0;
+	margin-top: 0;
+}
+
+.individual-slide p {
+	width: 30%;
+	line-height: 1.15;
+	font-weight: 400;
+}
+
+.individual-slide .btn-div {
+	padding: 20px 0 47px 0;
+}
+
+
+button.product-btn {
+	width: 350px;
+	height: 50px;
+	background-color: #58a7dc;
+	border: 1px solid #58a7dc;
+	border-radius: 5px;
+	font-weight: 700;
+}
+
+button.product-btn a {
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+#slide-left, #slide-right {
+	font-size: 30px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	color: #ffffff;
+	background-color: #58a7dc;
+	border: 1px solid #58a7dc;
+	display: inline-block;
+	position: absolute;
+	top: 40%;
+}
+
+#slide-right {
+	right: 5px;
+}
+
+#slide-left {
+	left: 5px;
+}
