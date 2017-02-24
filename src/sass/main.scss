@@ -1,7 +1,7 @@
 /* CSS Entry Point */
 
 // Turn on freq used libraries
-// @import 'normalize-css/normalize';
+@import 'normalize-css/normalize';
 // @import 'font-awesome/scss/font-awesome';
 
 #slider-container {
@@ -103,4 +103,119 @@ button.product-btn a {
 
 #slide-left {
 	left: 5px;
+}
+
+@media only screen and (max-width: 1340px) {
+
+	#slider-container {
+		margin: 0 auto;
+		position: relative;
+	}
+
+	#slider {
+		max-width: 655px;
+		width: 100%;
+		height: auto;
+	}
+
+	#slider .slides {
+		width: 3275px;
+		height: auto;
+	}
+
+
+	.individual-slide {
+		max-width: 655px;
+		width: 100%;
+		height: auto;
+	}
+
+	.individual-slide img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: auto;
+	}
+
+	.individual-slide h2 {
+		width: 90%;
+		padding: 420px 0 10px 0;
+		font-size: 32px;
+		margin: 10px auto;
+		text-align: center;
+	}
+
+	.individual-slide p {
+		width: 90%;
+		text-align: center;
+		margin: 0px auto;
+	}
+
+	.individual-slide .btn-div {
+		padding: 20px 0 20px 0;
+		text-align: center;
+	}
+}
+
+
+@media only screen and (max-width: 775px ) {
+	/*JQUERY SLIDER*/
+/*	#slider-container {
+		margin: 0 auto;
+		position: relative;
+	}*/
+
+	#slider {
+		max-width: 300px;
+		width: 100%;
+		height: auto;
+	}
+
+	#slider .slides {
+		width: 1500px;
+		height: auto;
+	}
+
+
+	.individual-slide {
+		max-width: 300px;
+		width: 100%;
+		height: auto;
+	}
+
+	.individual-slide img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		max-width: 300px;
+		width: 100%;
+		height: auto;
+	}
+
+	.individual-slide h2 {
+		width: 90%;
+		padding: 220px 0 10px 0;
+		font-size: 24px;
+		margin: 10px auto;
+		text-align: center;
+	}
+
+	.individual-slide p {
+		width: 90%;
+		text-align: center;
+		margin: 0px auto;
+		font-size: 18px;
+	}
+
+	.individual-slide .btn-div {
+		padding: 20px 0 20px 0;
+		text-align: center;
+	}
+
+	button.product-btn {
+		width: 280px;
+		font-size: 12px;
+	}
+
 }
