@@ -1,6 +1,6 @@
 
 
-jQuery(document).ready(function($) {
+import $ from 'jquery';
 
 	// FUNCTION DISPLAYS MOBILE MENU WHEN YOU TAP THE HAMBURGER
 	$('.hamburger-icon').click(function () {
@@ -14,9 +14,12 @@ jQuery(document).ready(function($) {
 
 	$('#post-4 button').removeClass('blue-border');
 
-	// THIS MAKES THE LAST ITEM IN THE SLIDER AS A REPLICA OF THE FIRST.
-	var clone = $('.individual-slide:first-child').clone();
-	$('.slides').append(clone);
+	// THIS MAKES THE LAST ITEM IN THE SLIDER AS A REPLICA OF THE FIRST. 
+	// ORIGINALLY MADE IN WORDPRESS WITH CONTENT PULLED IN BY A "CLIENT"
+	// var clone = $('.individual-slide:first-child').clone();
+	// $('.slides').append(clone);
+
+	
 	// NEXT SECTION OF FUNCTIONS MAKES THE SLIDER MOVE
 	// var width = 1220; //needs to grab value of width of slider/individual
 	
@@ -123,7 +126,7 @@ jQuery(document).ready(function($) {
 	// ///////////////////////////////
 
 
-});
+
 	
 
 
